@@ -1,4 +1,4 @@
-/* Reset and base setup */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ body {
   background-color: #f9f9f9;
 }
 
-/* ===== Fixed Navbar from navbar.html ===== */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -38,16 +38,14 @@ body {
   color: #007bff;
 }
 
-/* ===== Admin Form Wrapper ===== */
 .navbar-holder {
-  padding-top: 100px; /* Push content below navbar */
+  padding-top: 100px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
 }
 
-/* ===== Admin Form Styling ===== */
 form#blogForm {
   background-color: white;
   padding: 2rem 2.5rem;

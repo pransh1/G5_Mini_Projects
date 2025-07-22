@@ -1,4 +1,4 @@
-/* Reset and base */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +10,6 @@ body {
   background-color: #ffffff;
 }
 
-/* ===== Navbar ===== */
 .navbar {
   position: fixed;
   top: 0;
@@ -51,15 +50,13 @@ body {
   color: #007bff;
 }
 
-/* ===== Content below navbar ===== */
 main, .navbar-holder, form, .blog-container, .controls {
-  padding-top: 90px; /* Prevent overlap */
+  padding-top: 90px; 
   margin: 0 auto;
   width: 90%;
   max-width: 1000px;
 }
 
-/* Optional spacing for blog or admin pages */
 form {
   margin-top: 2rem;
   display: flex;

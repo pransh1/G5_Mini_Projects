@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +30,7 @@ body {
   text-decoration: underline;
 }
 
-/* Controls: Search, Filter, Sort */
+
 .controls {
   display: flex;
   flex-wrap: wrap;
@@ -48,7 +48,6 @@ body {
   min-width: 180px;
 }
 
-/* Blog container and cards */
 .blog-container {
   display: flex;
   flex-direction: column;
