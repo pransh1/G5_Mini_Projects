@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ---------------- NAVBAR ----------------
+
   const navbarPlaceholder = document.getElementById("navbar-placeholder");
   if (navbarPlaceholder) {
     fetch("navbar.html")
@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // ---------------- ADMIN PAGE (Create + Update) ----------------
   const form = document.getElementById("blogForm");
   const title = document.getElementById("title");
   const image = document.getElementById("image");
@@ -34,10 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       if (editIndex.value === "-1") {
-        // CREATE
+  
         blogs.push(blog);
       } else {
-        // UPDATE
+
         blogs[editIndex.value] = blog;
         editIndex.value = "-1";
         form.querySelector('input[type="submit"]').value = "Submit Blog";
@@ -48,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
     });
 
-    // If coming from edit
     const params = new URLSearchParams(window.location.search);
     if (params.has("edit")) {
       const index = params.get("edit");
@@ -66,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // ---------------- BLOGS PAGE (Read + Filter + Sort) ----------------
   const blogContainer = document.getElementById("blogContainer");
 
   if (blogContainer) {
@@ -94,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
 
-    // Sort by date
     filtered.sort((a, b) => {
       if (sort === "newest") {
         return new Date(b.dateAdded) - new Date(a.dateAdded);
@@ -121,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ---------------- GLOBAL DELETE + EDIT ----------------
   window.editBlog = function (index) {
     window.location.href = `admin.html?edit=${index}`;
   };
